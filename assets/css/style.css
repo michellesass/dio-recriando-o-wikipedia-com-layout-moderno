@@ -33,7 +33,28 @@ a { color:blue; text-decoration: none;}
 .sidebar {
     border-right: solid 1px #cdcdcd;
 }
-figure {
-    text-align: center;
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px;
 }
+
+figure {
+    margin-left: 10px; /* Ajusta a margem esquerda para posicionar o logo no canto esquerdo */
+}
+
+form {
+    flex-grow: 1; /* Permite que a caixa de pesquisa ocupe o espaço restante */
+    margin-top: 0cqb;
+    margin-left: 40px;
+
+}
+
+
+
+
+
+
 
