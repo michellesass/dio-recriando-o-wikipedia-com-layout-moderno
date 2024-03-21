@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Mario World - WikiPage, a enciclopédia livre</title>
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,15 +21,13 @@
         <figure id="logo">
             <img src="assets/images/logo.png" width="200" alt="Imagem de um globo terrestre representando o logo da página."/>
         </figure>
-
-    <!-- Aba de pesqusia -->
-        <form action="/search" method="GET">
+        
+        <form id="searchForm" onsubmit="return false;">
             <label for="search"></label>
-            <input type="text" id="search" name="q" placeholder="Pesquise na WikiPage">
-            <button type="submit">Pesquisar</button>
+            <input type="text" id="search" placeholder="Pesquisar na WikiPage">
+            <button type="button" onclick="searchText()">Pesquisar</button>
         </form>
     </header> 
-
 
 
     <!-- Barra lateral -->
@@ -53,6 +57,7 @@
         <main>
             <h1><i>Super Mario World</i></h1>
             <hr>
+            <p><small><sup>Origem: WikiPage, a enciclopédia livre.</sup></small></p>
             <p>Super Mario World (スーパーマリオワールド Sūpā Mario Wārudo?), originalmente chamado no Japão de Super Mario Bros. 4 (スーパーマリオブラザーズ4 Sūpā Mario Burazāzu fō?), é um jogo eletrônico de plataforma desenvolvido pela Nintendo Entertainment Analysis & Development e publicado pela Nintendo, em 1990, para o console Super Nintendo Entertainment System (SNES). A história segue a jornada de Mario para salvar a Princesa Toadstool e a Dinosaur Land do antagonista Bowser e de seus capangas, os Koopalings. A jogabilidade é semelhante à dos jogos anteriores da série Super Mario: os jogadores controlam Mario ou seu irmão Luigi através de uma série de fases, cujo objetivo é alcançar um portão gigante em seu final. Super Mario World introduz Yoshi, um dinossauro que pode comer inimigos, bem como ganhar habilidades comendo cascas de Koopa Troopas.
             </p>
 
@@ -185,6 +190,23 @@
         <p><small>Esta página foi editada pela última vez às 10h24min de 21 de março de 2024.</small></p>
         <p><small>Texto retirado da página oficial do Wikipedia, como referenciado nas Referências Bibliográficas, para a realização do projeto "Recriando o Wikipedia com Layout Moderno".</small></p>
     </footer>
+
+
+    <script>
+        function searchText() {
+            var searchTerm = document.getElementById("search").value;
+            var textElements = document.getElementsByTagName("p");
+
+            for (var i = 0; i < textElements.length; i++) {
+                var paragraph = textElements[i];
+                var text = paragraph.innerHTML;
+                var highlightedText = text.replace(new RegExp(searchTerm, 'gi'), function(match) {
+                    return '<mark class="highlight">' + match + '</mark>';
+                });
+                paragraph.innerHTML = highlightedText;
+            }
+        }
+    </script>
 
 </body>
 </html>
