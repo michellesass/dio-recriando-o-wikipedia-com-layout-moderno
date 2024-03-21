@@ -53,12 +53,16 @@ form {
     list-style-type: disc; /* Define o tipo de marcador como uma bolinha */
 }
 
+.iframe-container{
+    text-align: center;
+}
+
 /* Figuras da página */
 #logo {
     margin-left: 10px; /* Ajusta a margem esquerda para posicionar o logo no canto esquerdo */
 }
 
-#capa_mario {
+.image {
     text-align: center;
 }
 
