@@ -33,6 +33,7 @@ a { color:blue; text-decoration: none;}
 .sidebar {
     border-right: solid 1px #cdcdcd;
 }
+
 header {
     display: flex;
     align-items: center;
