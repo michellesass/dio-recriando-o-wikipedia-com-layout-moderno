@@ -71,11 +71,26 @@ form {
     background-color: yellow;
 }
 
-table {
-    border: 1;
-    width: 250;
+table thead th {
+    background-color: black;
+    color: white;
 }
 
+table tbody tr:nth-child(even) td {
+    background-color: #f1f1f1;
+}
+
+table tr:hover td {
+    background-color: darkgray;
+}
+
+table tbody{
+    text-align: center;
+}
+
+table tfoot{
+    text-align: center;
+}
 
 
 
