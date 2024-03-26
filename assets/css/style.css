@@ -35,11 +35,14 @@ a { color:blue; text-decoration: none;}
 }
 
 header {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: #ffffff;
-    padding: 10px;
+    max-width: 1440px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
+    padding-left: 1rem;
+    
 }
 
 form {
